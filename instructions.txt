@@ -1,0 +1,11 @@
+Today we spoke about how to build a good deep learning intuition. Here is my recommendation.
+
+Part 1)
+a) Complete the assignment attached below (part1.pdf). For bonus points try affine transformations, skew, radial distortion, and more. 
+b) Move your code to work on Cifar 10 => Achieve at least 91+% test accuracy. 
+If you have made it here, you should have a decent intuition. 
+c) (Bonus) Achieve the highest test accuracy possible (Remember, you can use anything you want as long as you write the code yourself and don't train on the test set). My record is 97.6% -- But I was HPP tuning on the test set so that's technically cheating. 
+---
+Part 2)
+a) Using any existing codebase, train a model to do person or dog segmentation. Segmentation architectures are very very relevant to everything we do here.
+b) (Bonus) Modify any of these architectures to do instance segmentation e.g. https://arxiv.org/pdf/1611.08303.pdf
