@@ -6,7 +6,7 @@ from tensorflow.keras import Model
 
 # One or two conv layers with same # of filters and then a pooling
 class ConvBlock(Model):
-	def __init__(self, filters, repeats):
+    def __init__(self, filters, repeats):
         super(Block, self).__init__()
         self.convs = Sequential([Conv2D(filters, 3, activation='relu') for _ in repeats])
         self.pool = MaxPool2D(2, 2, padding='none')
@@ -25,7 +25,7 @@ class VGG11(Model):
         self.fc_512_a = Dense(512, activation='relu', use_bias=True, kernel_initializer='glorot_uniform')
         self.fc_512_b = Dense(512, activation='relu', use_bias=True, kernel_initializer='glorot_uniform')
         self.fc_100_softmax = Dense(n_classes, activation='softmax', use_bias=True, kernel_initializer='glorot_uniform')
-		
+
     def call(self, x):
         x = self.conv_blocks(x)
         x = self.flatten(x)
